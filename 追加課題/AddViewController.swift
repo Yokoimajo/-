@@ -43,17 +43,23 @@ class AddViewController: UIViewController {
                 UIAlertAction(
                     title: "OK",
                     style: UIAlertActionStyle.Default,
-                    handler: self.back(<#T##segue: UIStoryboardSegue##UIStoryboardSegue#>)
+                    handler: goTableView
+                    )
                 )
-            )
+
             self.presentViewController(alert, animated: true, completion:nil)
             addTextField.text = ""
 
     }
-    func back(segue: UIStoryboardSegue){
-        
-    }
     
+    //登録が完了した時のアクション
+    func goTableView(ac: UIAlertAction){
+        let startView = self.storyboard!.instantiateViewControllerWithIdentifier("table") as! UITableViewController
+        self.presentViewController(startView, animated: true, completion: nil)
+        print("done")
+    }
+
+
 
     /*
     // MARK: - Navigation

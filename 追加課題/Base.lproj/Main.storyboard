@@ -46,20 +46,20 @@
             </objects>
             <point key="canvasLocation" x="1635" y="291"/>
         </scene>
-        <!--Table View Controller-->
+        <!--一覧-->
         <scene sceneID="fPc-uA-XK9">
             <objects>
                 <tableViewController storyboardIdentifier="table" id="yjp-d8-bIl" customClass="TableViewController" customModule="追加課題" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="28" sectionFooterHeight="28" id="t3c-T1-Qvr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" id="t3c-T1-Qvr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="119" id="gLu-UX-myg">
-                                <rect key="frame" x="0.0" y="92" width="320" height="119"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="92" id="gLu-UX-myg">
+                                <rect key="frame" x="0.0" y="92" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gLu-UX-myg" id="let-Ny-H30">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -69,10 +69,10 @@
                             <outlet property="delegate" destination="yjp-d8-bIl" id="mgT-3Z-CkN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zOs-27-mjK">
+                    <navigationItem key="navigationItem" title="一覧" id="zOs-27-mjK">
                         <barButtonItem key="rightBarButtonItem" title="+" width="4" id="YgB-C3-6e3">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="push" id="cPK-cm-mhH"/>
+                                <segue destination="BYZ-38-t0r" kind="push" id="Et7-pP-RPw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
