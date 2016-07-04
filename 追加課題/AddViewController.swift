@@ -34,34 +34,46 @@ class AddViewController: UIViewController {
             
             wordArray.append(wordDictionary)
             saveData.setObject(wordArray, forKey: "CONTENT")
+            back()
             
-            let alert = UIAlertController(
-                title: "保存完了",
-                message: "カウンターの登録が完了しました",
-                preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(
-                UIAlertAction(
-                    title: "OK",
-                    style: UIAlertActionStyle.Default,
-                    handler: goTableView
-                    )
-                )
-
-            self.presentViewController(alert, animated: true, completion:nil)
             addTextField.text = ""
 
     }
     
     //登録が完了した時のアクション
-    func goTableView(ac: UIAlertAction){
-        let startView = self.storyboard!.instantiateViewControllerWithIdentifier("table") as! UITableViewController
-        self.presentViewController(startView, animated: true, completion: nil)
-        print("done")
+    func back(){
+         self.navigationController?.popViewControllerAnimated(true)
     }
 
 
 
     /*
+    wordArray.append(wordDictionary)
+    saveData.setObject(wordArray, forKey: "CONTENT")
+    
+    let alert = UIAlertController(
+    title: "保存完了",
+    message: "カウンターの登録が完了しました",
+    preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(
+    UIAlertAction(
+    title: "OK",
+    style: UIAlertActionStyle.Default,
+    handler: goTableView
+    )
+    )
+    
+    self.presentViewController(alert, animated: true, completion:nil)
+    addTextField.text = ""
+    
+    }
+    
+    //登録が完了した時のアクション
+    func goTableView(ac: UIAlertAction){
+    let startView = self.storyboard!.instantiateViewControllerWithIdentifier("table") as! UITableViewController
+    self.presentViewController(startView, animated: true, completion: nil)
+    print("done")
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
